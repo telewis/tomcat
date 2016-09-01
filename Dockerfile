@@ -7,4 +7,5 @@ RUN tar xzf apache-tomcat-7.0.55.tar.gz
 #ENTRYPOINT ["/apache-tomcat-7.0.55/bin/startup.sh"]
 RUN yum -y install apr
 #CMD /apache-tomcat-7.0.55/bin/startup.sh && tail -f /apache-tomcat-7.0.55/logs/catalina.out
-#EXPOSE 8080
+CMD /apache-tomcat-7.0.55/bin/catalina.sh run
+EXPOSE 8080
